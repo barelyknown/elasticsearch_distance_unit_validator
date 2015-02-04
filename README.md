@@ -1,6 +1,14 @@
 # ElasticsearchDistanceUnitsValidator
 
-TODO: Write a gem description
+[Elasticsearch](http://www.elasticsearch.org) uses [distance units](http://www.elasticsearch.org/guide/en/elasticsearch/reference/current/common-options.html#distance-units) for features such as its [geo distance filter](http://www.elasticsearch.org/guide/en/elasticsearch/reference/current/query-dsl-geo-distance-filter.html).
+
+Examples of Elasticsearch distance units include `10ft` and `44miles`.
+
+Use this validator to validate that a string conforms to the distance unit format.
+
+```ruby
+validates :distance, elasticsearch_distance_unit: true
+```
 
 ## Installation
 
@@ -10,22 +18,6 @@ Add this line to your application's Gemfile:
 gem 'elasticsearch_distance_units_validator'
 ```
 
-And then execute:
+## Credits
 
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install elasticsearch_distance_units_validator
-
-## Usage
-
-TODO: Write usage instructions here
-
-## Contributing
-
-1. Fork it ( https://github.com/[my-github-username]/elasticsearch_distance_units_validator/fork )
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create a new Pull Request
+Originally created by [@barelyknown](https://twitter.com/barelyknown).
