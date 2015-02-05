@@ -6,7 +6,7 @@ require "elasticsearch_distance_unit_validator"
 
 Gem::Specification.new do |spec|
   spec.name          = "elasticsearch_distance_unit_validator"
-  spec.version       = ElasticsearchDistanceUnitValidator::VERSION
+  spec.version       = "0.1"
   spec.authors       = ["Sean Devine"]
   spec.email         = ["barelyknown@icloud.com"]
   spec.summary       = %q{Validator for Elasticsearch distance units.}
