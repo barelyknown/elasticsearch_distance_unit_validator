@@ -18,6 +18,9 @@ Add this line to your application's Gemfile:
 gem 'elasticsearch_distance_unit_validator'
 ```
 
+## Quality
+[ ![Codeship Status for barelyknown/elasticsearch_distance_unit_validator](https://codeship.com/projects/9bddf450-8efa-0132-e9e0-5ef1dd5f157a/status?branch=master)](https://codeship.com/projects/61122)
+
 ## Credits
 
 Originally created by [@barelyknown](https://twitter.com/barelyknown).
