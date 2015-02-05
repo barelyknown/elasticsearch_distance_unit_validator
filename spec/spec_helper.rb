@@ -1,3 +1,6 @@
+require "elasticsearch_distance_units_validator"
+require "support/test_model"
+
 RSpec.configure do |config|
   config.expect_with :rspec do |expectations|
     expectations.include_chain_clauses_in_custom_matcher_descriptions = true
