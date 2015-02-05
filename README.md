@@ -1,4 +1,4 @@
-# ElasticsearchDistanceUnitsValidator
+# ElasticsearchDistanceUnitValidator
 
 [Elasticsearch](http://www.elasticsearch.org) uses [distance units](http://www.elasticsearch.org/guide/en/elasticsearch/reference/current/common-options.html#distance-units) for features such as its [geo distance filter](http://www.elasticsearch.org/guide/en/elasticsearch/reference/current/query-dsl-geo-distance-filter.html).
 
@@ -15,7 +15,7 @@ validates :distance, elasticsearch_distance_unit: true
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'elasticsearch_distance_units_validator'
+gem 'elasticsearch_distance_unit_validator'
 ```
 
 ## Credits

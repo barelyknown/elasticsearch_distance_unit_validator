@@ -1,6 +1,6 @@
 require "active_model"
 
-class ElasticsearchDistanceUnitsValidator < ActiveModel::EachValidator
+class ElasticsearchDistanceUnitValidator < ActiveModel::EachValidator
   VERSION = "0.1"
   VALID_UNITS = %w(
     mi miles

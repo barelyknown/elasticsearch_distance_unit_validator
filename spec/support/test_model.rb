@@ -5,5 +5,5 @@ class TestModel
 
   attr_accessor :distance
 
-  validates :distance, elasticsearch_distance_units: true
+  validates :distance, elasticsearch_distance_unit: true
 end

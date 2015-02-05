@@ -1,4 +1,4 @@
-require "elasticsearch_distance_units_validator"
+require "elasticsearch_distance_unit_validator"
 require "support/test_model"
 
 RSpec.configure do |config|

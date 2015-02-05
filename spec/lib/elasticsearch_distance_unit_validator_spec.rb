@@ -1,6 +1,6 @@
 RSpec.describe TestModel do
   let :valid_units do
-    ElasticsearchDistanceUnitsValidator::VALID_UNITS
+    ElasticsearchDistanceUnitValidator::VALID_UNITS
   end
 
   let :invalid_units do
@@ -37,7 +37,7 @@ RSpec.describe TestModel do
       invalid_values.each do |value|
         subject.distance = value
         subject.valid?
-        expect(subject.errors[:distance]).to include Regexp.new(ElasticsearchDistanceUnitsValidator::INVALID_GENERAL_FORMAT_MESSAGE)
+        expect(subject.errors[:distance]).to include Regexp.new(ElasticsearchDistanceUnitValidator::INVALID_GENERAL_FORMAT_MESSAGE)
       end
     end
   end
@@ -54,7 +54,7 @@ RSpec.describe TestModel do
     context "when the units are invalid" do
       it "distance is invalid and has the correct error message" do
         valid_numbers.product(invalid_units).each do |number, unit|
-          validate_error_for(subject, number, unit, ElasticsearchDistanceUnitsValidator::INVALID_UNIT_MESSAGE)
+          validate_error_for(subject, number, unit, ElasticsearchDistanceUnitValidator::INVALID_UNIT_MESSAGE)
         end
       end
     end
@@ -63,14 +63,14 @@ RSpec.describe TestModel do
     context "when the units is valid" do
       it "distance is invalid and has the correct error message" do
         invalid_numbers.product(valid_units).each do |number, unit|
-          validate_error_for(subject, number, unit, ElasticsearchDistanceUnitsValidator::INVALID_NUMBER_MESSAGE)
+          validate_error_for(subject, number, unit, ElasticsearchDistanceUnitValidator::INVALID_NUMBER_MESSAGE)
         end
       end
     end
     context "when the units is invalid" do
       it "distance is invalid and has the correct error message" do
         invalid_numbers.product(invalid_units).each do |number, unit|
-          validate_error_for(subject, number, unit, ElasticsearchDistanceUnitsValidator::INVALID_UNIT_MESSAGE, ElasticsearchDistanceUnitsValidator::INVALID_NUMBER_MESSAGE)
+          validate_error_for(subject, number, unit, ElasticsearchDistanceUnitValidator::INVALID_UNIT_MESSAGE, ElasticsearchDistanceUnitValidator::INVALID_NUMBER_MESSAGE)
         end
       end
     end
