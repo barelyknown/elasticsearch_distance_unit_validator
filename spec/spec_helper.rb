@@ -1,3 +1,6 @@
+require "codeclimate-test-reporter"
+CodeClimate::TestReporter.start
+
 require "elasticsearch_distance_unit_validator"
 require "support/test_model"
 
