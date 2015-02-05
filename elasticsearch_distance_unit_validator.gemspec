@@ -2,8 +2,6 @@
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
-require "elasticsearch_distance_unit_validator"
-
 Gem::Specification.new do |spec|
   spec.name          = "elasticsearch_distance_unit_validator"
   spec.version       = "0.1"
